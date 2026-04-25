@@ -1,0 +1,114 @@
+{
+  "name": "chatbot-pro-saas",
+  "version": "1.0.0",
+  "description": "AI-Powered Chatbot B2B SaaS Platform",
+  "main": "index.html",
+  "type": "module",
+  "author": "Your Company",
+  "license": "proprietary",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "http-server -p 3000 -o",
+    "build": "echo 'No build step needed for static site'",
+    "test": "echo 'Tests not configured'",
+    "backend-dev": "nodemon backend/server.js"
+  },
+  "keywords": [
+    "chatbot",
+    "ai",
+    "saas",
+    "b2b",
+    "customer-support",
+    "real-estate",
+    "clinics"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chatbot-pro-saas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chatbot-pro-saas/issues"
+  },
+  "homepage": "https://chatbotpro.io",
+  "backendDependencies": {
+    "description": "Install these in your backend/package.json",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "axios": "^1.4.0",
+    "mongoose": "^7.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "bcryptjs": "^2.4.3",
+    "nodemailer": "^6.9.1",
+    "razorpay": "^2.9.0",
+    "stripe": "^12.0.0",
+    "express-validator": "^7.0.0",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.7.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  },
+  "frontendStructure": {
+    "description": "Current frontend structure",
+    "html": [
+      "index.html",
+      "dashboard.html"
+    ],
+    "css": [
+      "css/style.css",
+      "css/dashboard.css"
+    ],
+    "js": [
+      "js/auth.js",
+      "js/script.js",
+      "js/dashboard.js"
+    ],
+    "assets": [
+      "assets/images/",
+      "assets/icons/",
+      "assets/fonts/"
+    ]
+  },
+  "deploymentPlatforms": [
+    "Vercel",
+    "Netlify",
+    "GitHub Pages",
+    "AWS S3 + CloudFront",
+    "Azure Static Web Apps",
+    "Traditional hosting (Bluehost, GoDaddy, etc.)"
+  ],
+  "apiEndpoints": {
+    "auth": {
+      "verifyToken": "POST /api/verify-token",
+      "generateKey": "POST /api/generate-key"
+    },
+    "plans": {
+      "selectPlan": "POST /api/select-plan",
+      "getPlan": "GET /api/plan/:id"
+    },
+    "payment": {
+      "processPayment": "POST /api/process-payment",
+      "paymentStatus": "GET /api/payment/:id"
+    },
+    "analytics": {
+      "getAnalytics": "GET /api/analytics",
+      "getConversations": "GET /api/conversations"
+    },
+    "settings": {
+      "updateSettings": "PUT /api/settings",
+      "getSettings": "GET /api/settings"
+    }
+  }
+}

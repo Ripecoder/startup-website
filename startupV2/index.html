@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot Pro - AI Chatbot Solutions for Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">ChatBot<span class="logo-accent">Pro</span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#about" class="nav-link">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">AI-Powered Chatbot Support <span class="gradient-text">for Your Enterprise</span></h1>
+                <p class="hero-subtitle">Deploy intelligent chatbots in minutes. Perfect for Real Estate Agencies, Clinics, and Businesses of All Sizes.</p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="loginBtn">Get Started with Google</button>
+                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                </div>
+
+                <!-- Google Auth Container -->
+                <div id="googleAuthContainer" class="auth-container hidden"></div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="chat-preview">
+                    <div class="chat-bubble user">Hi, I need help with a property listing</div>
+                    <div class="chat-bubble bot">I'd be happy to help! Which property are you interested in?</div>
+                    <div class="chat-bubble user">The beachfront villa</div>
+                    <div class="chat-bubble bot">Great choice! Let me provide you with detailed information...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose ChatBot Pro?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced NLP technology that understands context and provides accurate responses</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Instant responses with 99.9% uptime guarantee</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Easy Integration</h3>
+                    <p>Simple one-line script integration. No technical skills required</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Track conversations, user satisfaction, and performance metrics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p>End-to-end encryption and GDPR compliant data handling</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Language</h3>
+                    <p>Support for 50+ languages and localization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Choose the perfect plan for your business</p>
+            
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">9,999</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <p class="pricing-description">Perfect for small businesses and startups</p>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Up to 1,000 conversations/month</li>
+                        <li><span class="check">✓</span> Basic analytics</li>
+                        <li><span class="check">✓</span> Email support</li>
+                        <li><span class="check">✓</span> 1 website integration</li>
+                        <li><span class="check">✓</span> Standard templates</li>
+                    </ul>
+                    <button class="btn btn-outline w-100">Get Started</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">24,999</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <p class="pricing-description">Ideal for growing enterprises</p>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Up to 10,000 conversations/month</li>
+                        <li><span class="check">✓</span> Advanced analytics & insights</li>
+                        <li><span class="check">✓</span> Priority support (24/7)</li>
+                        <li><span class="check">✓</span> 5 website integrations</li>
+                        <li><span class="check">✓</span> Custom templates & branding</li>
+                        <li><span class="check">✓</span> Lead scoring & qualification</li>
+                    </ul>
+                    <button class="btn btn-primary w-100">Get Started</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">99,999</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <p class="pricing-description">For large-scale operations</p>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Unlimited conversations</li>
+                        <li><span class="check">✓</span> Custom AI training</li>
+                        <li><span class="check">✓</span> Dedicated account manager</li>
+                        <li><span class="check">✓</span> Unlimited integrations</li>
+                        <li><span class="check">✓</span> White-label solution</li>
+                        <li><span class="check">✓</span> API access & webhooks</li>
+                        <li><span class="check">✓</span> SLA guarantee</li>
+                    </ul>
+                    <button class="btn btn-outline w-100">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ChatBot Pro</h4>
+                    <p>AI-Powered Customer Support Solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChatBot Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

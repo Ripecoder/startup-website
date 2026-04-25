@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ChatBot Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">ChatBot<span class="logo-accent">Pro</span></span>
+                </div>
+                <div class="nav-right">
+                    <div id="userProfile" class="user-profile">
+                        <img id="userAvatar" src="" alt="User Avatar" class="avatar">
+                        <span id="userName"></span>
+                        <button id="logoutBtn" class="btn-logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#setup" class="menu-item active" data-section="setup">Setup</a></li>
+                <li><a href="#integration" class="menu-item" data-section="integration">Integration Code</a></li>
+                <li><a href="#pricing" class="menu-item" data-section="pricing">Choose Plan</a></li>
+                <li><a href="#payment" class="menu-item" data-section="payment">Payment</a></li>
+                <li><a href="#analytics" class="menu-item" data-section="analytics">Analytics</a></li>
+                <li><a href="#settings" class="menu-item" data-section="settings">Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Setup Section -->
+            <section id="setup" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Welcome to ChatBot Pro</h1>
+                    <p>Let's get your chatbot set up in just a few minutes</p>
+                </div>
+
+                <div class="setup-steps">
+                    <div class="step-card completed">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Account Created</h3>
+                            <p>Your account is ready to go!</p>
+                        </div>
+                        <div class="step-icon">✓</div>
+                    </div>
+
+                    <div class="step-card active">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Generate API Key</h3>
+                            <p>Your unique API key will allow you to integrate the chatbot</p>
+                            <button class="btn btn-small btn-primary" id="generateKeyBtn">Generate API Key</button>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Copy Integration Script</h3>
+                            <p>Add our script tag to your website</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Choose Plan & Pay</h3>
+                            <p>Select your subscription tier and process payment</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Go Live</h3>
+                            <p>Your chatbot is now active on your website</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Integration Section -->
+            <section id="integration" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Integration Code</h1>
+                    <p>Copy this script tag and paste it into your website's HTML</p>
+                </div>
+
+                <div class="integration-box">
+                    <div class="code-preview">
+                        <code id="integrationScript">&lt;script src="https://chatbotpro.io/chatbot.js?key=your_api_key_here"&gt;&lt;/script&gt;</code>
+                    </div>
+                    <button class="btn btn-primary" id="copyScriptBtn">Copy Script</button>
+                </div>
+
+                <div class="info-box">
+                    <h3>📝 Installation Guide</h3>
+                    <ol>
+                        <li>Go to your website's HTML file</li>
+                        <li>Paste this script tag before the closing &lt;/body&gt; tag</li>
+                        <li>Save and refresh your website</li>
+                        <li>Your chatbot will appear in the bottom-right corner</li>
+                    </ol>
+                </div>
+
+                <div class="integration-preview">
+                    <h3>Preview</h3>
+                    <p>Your chatbot will appear like this on your website:</p>
+                    <div class="website-preview">
+                        <div class="chatbot-widget">
+                            <div class="widget-header">Support Chat</div>
+                            <div class="widget-messages">
+                                <div class="msg bot">Hi! How can I help you today?</div>
+                            </div>
+                            <input type="text" placeholder="Type your message..." disabled>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Choose Your Plan</h1>
+                    <p>Select the plan that best fits your needs</p>
+                </div>
+
+                <div class="pricing-grid dashboard-pricing">
+                    <!-- Starter Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Starter</h3>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">9,999</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <p class="pricing-description">Perfect for small businesses</p>
+                        <ul class="pricing-features">
+                            <li><span class="check">✓</span> Up to 1,000 conversations/month</li>
+                            <li><span class="check">✓</span> Basic analytics</li>
+                            <li><span class="check">✓</span> Email support</li>
+                            <li><span class="check">✓</span> 1 website integration</li>
+                        </ul>
+                        <button class="btn btn-outline w-100 select-plan" data-plan="starter">Select Plan</button>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div class="pricing-card featured">
+                        <div class="badge">Recommended</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Pro</h3>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">24,999</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <p class="pricing-description">Best for growing businesses</p>
+                        <ul class="pricing-features">
+                            <li><span class="check">✓</span> Up to 10,000 conversations/month</li>
+                            <li><span class="check">✓</span> Advanced analytics</li>
+                            <li><span class="check">✓</span> Priority support (24/7)</li>
+                            <li><span class="check">✓</span> 5 website integrations</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 select-plan" data-plan="pro">Select Plan</button>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Enterprise</h3>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">99,999</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <p class="pricing-description">For large organizations</p>
+                        <ul class="pricing-features">
+                            <li><span class="check">✓</span> Unlimited conversations</li>
+                            <li><span class="check">✓</span> Custom AI training</li>
+                            <li><span class="check">✓</span> Dedicated account manager</li>
+                            <li><span class="check">✓</span> White-label solution</li>
+                        </ul>
+                        <button class="btn btn-outline w-100 select-plan" data-plan="enterprise">Select Plan</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Section -->
+            <section id="payment" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Payment</h1>
+                    <p>Complete your subscription</p>
+                </div>
+
+                <div id="selectedPlanDisplay" class="selected-plan" style="display: none;">
+                    <h3>Selected Plan: <span id="selectedPlanName"></span></h3>
+                    <p>Amount: <strong>₹<span id="selectedPlanAmount"></span>/month</strong></p>
+                </div>
+
+                <div class="payment-form">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>Credit / Debit Card</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="upi">
+                            <span>UPI</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="netbanking">
+                            <span>Net Banking</span>
+                        </label>
+                    </div>
+
+                    <div id="cardForm" class="form-section">
+                        <input type="text" placeholder="Cardholder Name" class="form-input">
+                        <input type="text" placeholder="Card Number" class="form-input">
+                        <div class="form-row">
+                            <input type="text" placeholder="MM/YY" class="form-input">
+                            <input type="text" placeholder="CVV" class="form-input">
+                        </div>
+                    </div>
+
+                    <div id="upiForm" class="form-section" style="display: none;">
+                        <input type="email" placeholder="UPI ID (username@bank)" class="form-input">
+                    </div>
+
+                    <div id="netbankingForm" class="form-section" style="display: none;">
+                        <select class="form-input">
+                            <option value="">Select Your Bank</option>
+                            <option value="hdfc">HDFC Bank</option>
+                            <option value="icici">ICICI Bank</option>
+                            <option value="sbi">State Bank of India</option>
+                            <option value="axis">Axis Bank</option>
+                        </select>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox" checked>
+                        <span>I agree to the Terms of Service and Privacy Policy</span>
+                    </label>
+
+                    <button class="btn btn-primary w-100" id="payNowBtn">Pay Now</button>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Analytics</h1>
+                    <p>Track your chatbot performance</p>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Conversations</div>
+                        <div class="stat-value">1,234</div>
+                        <div class="stat-change positive">↑ 12% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">User Satisfaction</div>
+                        <div class="stat-value">4.7/5</div>
+                        <div class="stat-change positive">↑ 0.3 from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Avg Response Time</div>
+                        <div class="stat-value">0.5s</div>
+                        <div class="stat-change positive">↓ 0.2s faster</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Active Conversations</div>
+                        <div class="stat-value">24</div>
+                        <div class="stat-change">Currently active</div>
+                    </div>
+                </div>
+
+                <div class="chart-placeholder">
+                    <p>📊 Conversation trends chart coming soon</p>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Settings</h1>
+                    <p>Manage your account and preferences</p>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Account Information</h3>
+                    <div class="setting-item">
+                        <label>Email</label>
+                        <input type="email" id="settingsEmail" class="form-input" disabled>
+                    </div>
+                    <div class="setting-item">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="Your company name" class="form-input">
+                    </div>
+                    <div class="setting-item">
+                        <label>Website URL</label>
+                        <input type="url" placeholder="https://yourwebsite.com" class="form-input">
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Chatbot Customization</h3>
+                    <div class="setting-item">
+                        <label>Chatbot Name</label>
+                        <input type="text" placeholder="e.g., Support Assistant" class="form-input">
+                    </div>
+                    <div class="setting-item">
+                        <label>Welcome Message</label>
+                        <textarea placeholder="Welcome to our support!" class="form-input"></textarea>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Notifications</h3>
+                    <label class="checkbox">
+                        <input type="checkbox" checked>
+                        <span>Email notifications for new conversations</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" checked>
+                        <span>Weekly performance report</span>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary">Save Changes</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
